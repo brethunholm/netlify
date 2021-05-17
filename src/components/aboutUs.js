@@ -2,7 +2,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
 
@@ -21,6 +20,10 @@ const AboutUsStyled = styled.div`
   h1 {
     font-size: 2rem;
     text-align: center;
+  }
+
+  .highlight {
+    color: var(--btn-primary);
   }
 
   @media (min-width: 973px) and (max-width: 1294px) {
@@ -97,7 +100,9 @@ export default function aboutUs() {
   return (
     <SectionContainer flex="column" id="team" className="grids">
       <AboutUsStyled>
-        <h1>MEET THE TEAM</h1>
+        <h1>
+          MEET THE <span className="highlight">TEAM</span>
+        </h1>
         <div className="team boxes" data-aos="slide-right">
           {theMembers}
         </div>

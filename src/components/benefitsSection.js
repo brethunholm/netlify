@@ -20,6 +20,11 @@ const StyledBenefits = styled.div`
   h1 {
     text-transform: uppercase;
   }
+
+  .highlight {
+    color: var(--btn-primary);
+  }
+
   .container {
     display: flex;
     max-width: 700px;
@@ -46,7 +51,9 @@ export default function BenefitsSection() {
   return (
     <SectionContainer background="#f1f2f6" id="benefits">
       <StyledBenefits>
-        <h1>Why Outstandingly?</h1>
+        <h1>
+          Why <span className="highlight">Outstandingly?</span>
+        </h1>
         <div className="grids">
           <div className="container boxes" data-aos="fade-up">
             {benniesCards}
